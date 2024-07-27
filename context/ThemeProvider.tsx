@@ -1,3 +1,5 @@
+"use client"
+
 import { ClerkProvider } from "@clerk/nextjs";
 import dark from "@clerk/themes";
 import React, { createContext, useContext, useState, useEffect } from "react";
@@ -32,9 +34,11 @@ export function ThemeProvider({ children } : { children : React.ReactNode }) {
   return (
 
       <ThemeContext.Provider value={{ mode, setMode }}>
-        <ClerkProvider  appearance={{
-          baseTheme: mode === "dark" ? dark : undefined,
-        }}>
+        <ClerkProvider  
+        // appearance={{
+        //    baseTheme: mode === "dark" ? dark : undefined,
+        // }}
+        >
             {children}
         </ClerkProvider>
         <Toaster richColors theme={mode === "dark" ? "dark" : "light"} />
