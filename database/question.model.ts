@@ -14,11 +14,11 @@ export interface IQuestion extends Document {
 
 const questionSchema = new Schema({
   title: { type: String, required: true },
-  views: {type:Number, default:0},
+  views: { type: Number, default: 0 },
   content: { type: String, required: true },
   upVotes: [{ type: Schema.Types.ObjectId, ref: "User" }],
   downVotes: [{ type: Schema.Types.ObjectId, ref: "User" }],
-  tags: [{ type: Schema.Types.ObjectId, ref: "Tag" }] ,
+  tags: [{ type: Schema.Types.ObjectId, ref: "Tag" }],
   author: { type: Schema.Types.ObjectId, ref: "User" },
   answers: [{ type: Schema.Types.ObjectId, ref: "User" }],
   createdAt: { type: Date, default: Date.now },
