@@ -9,7 +9,7 @@ import {
 import { usePathname } from "next/navigation";
 import { toast } from "sonner";
 
-import { QUESTION_ICON_SIZE } from "@/constants/constants";
+import { QUESTION_ICON_SIZE } from "@/constants";
 import { upVoteAnswer, downVoteAnswer } from "@/lib/actions/answer.action";
 import {
   downVoteQuestion,
