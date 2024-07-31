@@ -42,4 +42,7 @@
   .border-hover {
     @apply border-zinc-500 dark:border-zinc-500 !important;
   }
+  .primary-gradient {
+    background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%);
+  }
 }

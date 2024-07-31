@@ -100,7 +100,7 @@ const SidebarContent = ({
       >
         <SheetClose asChild>
           <Button
-            variant="default"
+          className="primary-gradient"
             onClick={() => {
               if (!username)
                 return toast.error("Sign in required to access this page");

@@ -29,7 +29,7 @@ const Navbar = async ({ user, tags }: { user: IUser; tags: ITag }) => {
         <div className="max-md:hidden">
           <SignedOut>
             <Link href="/sign-in">
-              <Button variant="default">Sign in</Button>
+              <Button className="primary-gradient">Sign in</Button>
             </Link>
           </SignedOut>
           <SignedIn>
