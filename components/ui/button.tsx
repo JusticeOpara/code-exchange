@@ -12,15 +12,18 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary primary-gradient text-primary-foreground hover:bg-primary/90",
+        default:
+          "no-focus hover:drop-shadow-l h-8 w-full rounded-full bg-gradient-to-r primary-gradient  text-sm text-white shadow-lg transition-all duration-1000 hover:cursor-pointer ",
+        default_small:
+          "no-focus mx-auto w-fit rounded-full bg-gradient-to-r primary-gradient !px-8 text-sm text-white shadow-lg transition-all duration-1000 hover:cursor-pointer  hover:drop-shadow-lg",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "border-primary text-hover hover:border-hover max-h-8 cursor-pointer gap-1 rounded-full border bg-transparent px-4 text-xs",
+        secondary: "bg-secondary text-hover-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        ai: "no-focus max-h-7 gap-2 rounded-xl bg-gradient-to-r from-purple-500 to-violet-600 pl-2 pr-3 text-sm text-white shadow-none hover:from-purple-600 hover:to-violet-700",
       },
       size: {
         default: "h-10 px-4 py-2",

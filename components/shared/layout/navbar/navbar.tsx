@@ -12,7 +12,7 @@ import Theme from "./theme";
 
 const Navbar = async ({ user, tags }: { user: IUser; tags: ITag }) => {
   return (
-    <nav className="flex-between border-primary bg-primary fixed z-50 h-20 w-full gap-2 border-b p-4 bg-red-500 shadow-zinc-300 dark:shadow-none mb-6">
+    <nav className="flex-between border-primary bg-primary fixed z-50 h-20 w-full gap-2 border-b p-4 shadow-zinc-300 dark:shadow-none mb-6">
       <MobileNav username={user?.username} tags={JSON.stringify(tags)} />
       <Link
         href="/"
