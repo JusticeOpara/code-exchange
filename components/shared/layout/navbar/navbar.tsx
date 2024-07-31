@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 import { ITag } from "@/database/tag.model";
 import { IUser } from "@/database/user.model";
 
-import Search from "../search/search";
+// import Search from "../search/search";
 
-import { MobileNav } from "./mobile-nav";
+import { MobileNav } from "./moblie-nav";
 import Theme from "./theme";
 
 const Navbar = async ({ user, tags }: { user: IUser; tags: ITag }) => {
@@ -19,12 +19,12 @@ const Navbar = async ({ user, tags }: { user: IUser; tags: ITag }) => {
         href="/"
         className="flex size-10 items-center gap-1 lg:w-72 xl:w-48"
       >
-        <Image src="/svg/logo.svg" alt="DevFlow" width={24} height={24} />
+        <Image src="/svg/logo.svg" alt="Code-Exchange" width={24} height={24} />
         <p className="text-primary ml-1 font-geistSans text-lg font-semibold max-lg:hidden">
           DevOverflow
         </p>
       </Link>
-      <Search />
+      {/* <Search /> */}
       <div className="flex items-center justify-end gap-2 xl:w-48">
         <Theme />
         <div className="max-md:hidden">

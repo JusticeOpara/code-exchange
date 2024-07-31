@@ -14,7 +14,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { sidebarLinks, THEME_MENU_ICON_SIZE } from "@/constants/constants";
+import { sidebarLinks, THEME_MENU_ICON_SIZE } from "@/constants";
 import { Tag } from "@/types";
 
 const Discover = ({ username }: { username: string }) => {
@@ -123,7 +123,7 @@ const MobileNav = ({ username, tags }: { username: string; tags: string }) => {
       <SheetContent side="left" className="bg-primary border-none">
         <section className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-1">
-            <Image src="/svg/logo.svg" alt="DevFlow" width={24} height={24} />
+            <Image src="/svg/logo.svg" alt="Code-Exchange" width={24} height={24} />
             <p className="text-primary ml-1 font-geistSans text-lg font-semibold max-lg:hidden">
               DevOverflow
             </p>

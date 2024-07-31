@@ -5,10 +5,10 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { toast } from "sonner";
 
-import { THEME_MENU_ICON_SIZE, sidebarLinks } from "@/constants/constants";
+import { THEME_MENU_ICON_SIZE, sidebarLinks } from "@/constants";
 import { Tag } from "@/types";
 
-import { Button } from "../../ui/button";
+import { Button } from "@/components/ui/button";
 
 const Discover = ({ username }: { username: string }) => {
   const pathname = usePathname();

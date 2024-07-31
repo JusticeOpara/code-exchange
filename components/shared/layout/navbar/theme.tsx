@@ -9,7 +9,7 @@ import {
   MenubarMenu,
   MenubarTrigger,
 } from "@/components/ui/menubar";
-import { THEME_MENU_ICON_SIZE, THEME_OPTIONS } from "@/constants/constants";
+import { THEME_MENU_ICON_SIZE, THEME_OPTIONS } from "@/constants";
 import { useTheme } from "@/context/ThemeProvider";
 
 const Theme = () => {
