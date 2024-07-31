@@ -125,7 +125,7 @@ const MobileNav = ({ username, tags }: { username: string; tags: string }) => {
           <Link href="/" className="flex items-center gap-1">
             <Image src="/svg/logo.svg" alt="Code-Exchange" width={24} height={24} />
             <p className="text-primary ml-1 font-geistSans text-lg font-semibold max-lg:hidden">
-              DevOverflow
+            Code-Exchange
             </p>
           </Link>
           <div className="flex items-center md:hidden">

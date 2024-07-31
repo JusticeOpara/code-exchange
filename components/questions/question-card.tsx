@@ -6,7 +6,7 @@ import { getTimeAgo } from "@/lib/utils";
 import { Question } from "@/types";
 
 import AuthorProfileLink from "../shared/author-profile-link";
-import Stats from "../shared/stats";
+import Stats from "@/components/shared/stats";
 import Tag from "../shared/tag";
 import VoteAndSave from "../shared/vote-and-save";
 

@@ -3,7 +3,7 @@ import { Question } from "@/types";
 
 import DeleteItemButton from "../shared/delete-item-button";
 import ParseHTML from "../shared/parse-html";
-import Stats from "../shared/stats";
+import Stats from "@/components/shared/stats";
 import Tag from "../shared/tag";
 import VoteAndSave from "../shared/vote-and-save";
 
