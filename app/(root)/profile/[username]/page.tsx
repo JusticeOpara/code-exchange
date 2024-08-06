@@ -2,7 +2,7 @@ import { auth } from "@clerk/nextjs/server";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
 
-import ProfileCard from "@/components/profile/";
+import ProfileCard from "@/components/profile/profile-card";
 import UserActivityTabs from "@/components/profile/user-activity-tabs";
 import { getUserData } from "@/lib/actions/user.action";
 

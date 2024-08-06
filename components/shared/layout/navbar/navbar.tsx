@@ -16,9 +16,9 @@ const Navbar = async ({ user, tags }: { user: IUser; tags: ITag }) => {
       <MobileNav username={user?.username} tags={JSON.stringify(tags)} />
       <Link
         href="/"
-        className="flex size-10 items-center bg-white lg:w-72 xl:w-48"
+        className="flex size-10 items-center lg:w-72 xl:w-48"
       >
-        <Image src="/logo.svg" alt="Code-Exchange" width={30} height={30} />
+        <Image src="/logo.svg" alt="Code-Exchange" width={30} height={30} className="bg-white" />
         <p className="text-primary ml-1 font-geistSans text-lg font-semibold max-lg:hidden">
           CodeExchange
         </p>

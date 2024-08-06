@@ -17,7 +17,7 @@ import {
     RiMenuSearchFill
   } from "@remixicon/react";
   
-  import { SidebarLinks } from "@/types";
+  import { SidebarLink } from "@/types";
   
   export const THEME_OPTIONS = [
     { value: "light", label: "Light", icon: RiSunLine, iconFilled: RiSunFill },
@@ -33,7 +33,7 @@ import {
   export const QUESTION_ICON_SIZE = 18;
   export const SMALL_ICON_SIZE = 16;
   
-  export const sidebarLinks: SidebarLinks[] = [
+  export const sidebarLinks: SidebarLink[] = [
     {
       route: "/",
       label: "Home",
@@ -52,12 +52,12 @@ import {
       icon: RiBookmarkLine,
       iconFilled: RiBookmarkFill,
     },
-    {
-      route: "/jobs",
-      label: "Find Jobs",
-      icon: RiMenuSearchLine,
-      iconFilled: RiMenuSearchFill,
-    },
+    // {
+    //   route: "/jobs",
+    //   label: "Find Jobs",
+    //   icon: RiMenuSearchLine,
+    //   iconFilled: RiMenuSearchFill,
+    // },
     {
       route: "/profile",
       label: "Profile",
