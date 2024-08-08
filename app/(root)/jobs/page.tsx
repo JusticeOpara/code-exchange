@@ -1,69 +1,99 @@
-import { fetchCountries, fetchJobs, fetchLocation } from "@/actions/job";
-import JobCard from "@/components/card/job-card";
-import JobsFilter from "@/components/job-filter";
+import JobCard from "@/components/jobs/job-card";
+import JobsFilter from "@/components/jobs/jobs-filter";
 import Pagination from "@/components/shared/pagination";
-import { Job } from "@/types";
-import { Metadata } from "next";
+// import LocalSearchbar from "@/components/shared/search/LocalSearchbar";
+import { fetchCountries,fetchLocation,fetchJobs } from "@/lib/actions/job.action";
+import { Job, SearchParamsProps } from "@/types";
 
-export const metadata: Metadata = {
-  title: "Jobs",
-  description: "Jobs page of the Code Stacker platform.",
+
+
+const QUERY_SEARCH_PARAMS_KEY = "q";
+const FILTER_SEARCH_PARAMS_KEY = "filter";
+const PAGE_NUMBER_SEARCH_PARAMS_KEY = "page";
+const generateJobSearchQuery = (
+  userLocation: string,
+  searchParams?: { [key: string]: string | undefined }
+) => {
+  if (searchParams) {
+    if (
+      QUERY_SEARCH_PARAMS_KEY in searchParams &&
+      searchParams[QUERY_SEARCH_PARAMS_KEY] &&
+      FILTER_SEARCH_PARAMS_KEY in searchParams &&
+      searchParams[FILTER_SEARCH_PARAMS_KEY]
+    ) {
+      return `${searchParams[QUERY_SEARCH_PARAMS_KEY]} in ${searchParams[FILTER_SEARCH_PARAMS_KEY]}`;
+    } else if (
+      QUERY_SEARCH_PARAMS_KEY in searchParams &&
+      searchParams[QUERY_SEARCH_PARAMS_KEY]
+    ) {
+      return `${searchParams[QUERY_SEARCH_PARAMS_KEY]}`;
+    } else if (
+      FILTER_SEARCH_PARAMS_KEY in searchParams &&
+      searchParams[FILTER_SEARCH_PARAMS_KEY]
+    ) {
+      return `Software Developer in ${searchParams[FILTER_SEARCH_PARAMS_KEY]}`;
+    }
+  }
+  if (userLocation.trim().length === 0) {
+    return "Software Developer";
+  }
+  return `Software Developer in ${userLocation}`;
 };
 
-interface Props {
-  searchParams: {
-    q: string;
-    location: string;
-    page: string;
-  };
-}
-
-const JobsPage = async ({ searchParams }: Props) => {
+const Jobs = async ({ searchParams }: SearchParamsProps) => {
   const userLocation = await fetchLocation();
-  const { jobs, totalPages } = await fetchJobs({
-    query:
-      `${searchParams.q}, ${searchParams.location}` ??
-      `Software Engineer in ${userLocation}`,
-    page: searchParams.page ?? 1,
+  const jobs = await fetchJobs({
+    query: generateJobSearchQuery(userLocation, searchParams),
+    page: searchParams[PAGE_NUMBER_SEARCH_PARAMS_KEY]
+      ? +searchParams[PAGE_NUMBER_SEARCH_PARAMS_KEY]
+      : 1,
   });
-
   const countries = await fetchCountries();
-  const page = parseInt(searchParams.page ?? 1);
+  console.log({ countries, jobs, userLocation });
 
   return (
     <>
       <h1 className="h1-bold text-dark100_light900">Jobs</h1>
-
-      <div className="flex">
-        <JobsFilter countriesList={countries} />
+      <div className="mt-11 flex justify-between gap-5 max-sm:flex-col sm:items-center">
+        {/* <LocalSearchbar
+          route="/jobs"
+          iconPosition="left"
+          imgSrc="/assets/icons/search.svg"
+          placeholder="Job Title, Company or Keywords"
+          otherClasses="flex-1"
+        /> */}
+        <JobsFilter
+          filters={countries}
+          otherClasses="min-h-[56px] sm:min-w-[170px]"
+        />
       </div>
-
-      <section className="light-border mb-9 mt-11 flex flex-col gap-9 border-b pb-9">
+      <section className="mt-12 flex flex-wrap gap-4">
         {jobs.length > 0 ? (
-          jobs.map((job: Job, index: number) => {
-            if (job.job_title && job.job_title.toLowerCase() !== "undefined")
-              return <JobCard key={index} job={job} />;
-
+          jobs.map((job: Job) => {
+            if (job.jobTitle && job.jobTitle.toLowerCase() !== "undefined") {
+              return <JobCard key={job.id} job={job} />;
+            }
             return null;
           })
         ) : (
-          <div className="paragraph-regular text-dark200_light800 w-full text-center">
+          <div className="paragraph-regular text-dark200_light800 mx-auto max-w-4xl text-center">
             Oops! We couldn&apos;t find any jobs at the moment. Please try again
             later
           </div>
         )}
       </section>
-
-      {jobs.length > 0 && (
+      <div className="mt-10">
         <Pagination
-          pageNumber={page}
-          isNext={jobs.length === 10}
-          totalPages={jobs.length / 10}
+          pageNumber={searchParams[PAGE_NUMBER_SEARCH_PARAMS_KEY]
+              ? +searchParams[PAGE_NUMBER_SEARCH_PARAMS_KEY]
+              : 1
+          }
+          hasNext={jobs.length === 10}
         />
-        
-      )}
+         
+      </div>
     </>
   );
 };
 
-export default JobsPage;
+export default Jobs;

@@ -52,12 +52,12 @@ import {
       icon: RiBookmarkLine,
       iconFilled: RiBookmarkFill,
     },
-    // {
-    //   route: "/jobs",
-    //   label: "Find Jobs",
-    //   icon: RiMenuSearchLine,
-    //   iconFilled: RiMenuSearchFill,
-    // },
+    {
+      route: "/jobs",
+      label: "Find Jobs",
+      icon: RiMenuSearchLine,
+      iconFilled: RiMenuSearchFill,
+    },
     {
       route: "/profile",
       label: "Profile",

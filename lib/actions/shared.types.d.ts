@@ -79,6 +79,10 @@ export interface editQuestionParams {
   content: string;
   path: string;
 }
+export interface JobFilterParams {
+  query: string;
+  page?: number;
+}
 
 export interface getAllTagsParams {
   page?: number;
