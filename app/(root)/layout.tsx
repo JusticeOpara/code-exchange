@@ -18,7 +18,7 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
       <div className="flex justify-center pt-24 ">
        <LeftSidebar user={user} tags={tags} /> 
         <section className="min-h-[90vh] max-2xl:mx-auto">
-          <div className="w-[95vw] bg-slate-700 pt-2 md:w-[42rem]">{children}</div>
+          <div className="w-[95vw] pt-2 md:w-[42rem]">{children}</div>
         </section>
      <RightSidebar /> 
       </div>

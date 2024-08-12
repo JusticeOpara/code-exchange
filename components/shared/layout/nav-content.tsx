@@ -91,7 +91,7 @@ const SidebarContent = ({
           variant="default"
           onClick={() => {
             if (!username)
-              return toast.error("Sign in required to access this page");
+              return toast.error("Sign in required to access this pagehghghghg");
           }}
         >
           Ask a Question

@@ -67,7 +67,7 @@ const AnswerForm = ({
     setIsSubmittingAI(true);
 
     try {
-      const response = await fetch(`/api/chatgpt`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/chatgpt`, {
         method: "POST",
         body: JSON.stringify({
           question,

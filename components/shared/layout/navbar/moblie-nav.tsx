@@ -23,7 +23,8 @@ const Discover = ({ username }: { username: string }) => {
 
   const handleClick = (route: string) => () => {
     if ((route === "/profile" || route === "/bookmarks") && !username) {
-      return toast.error("Sign in required to access this page");
+      console.log(username,"userName")
+      return toast.error("Sign in required to access this page ...");
     }
     return router.push(route === "/profile" ? `/profile/${username}` : route);
   };
@@ -103,7 +104,7 @@ const SidebarContent = ({
           className="primary-gradient"
             onClick={() => {
               if (!username)
-                return toast.error("Sign in required to access this page");
+                return toast.error("Sign in required to access this page ");
             }}
           >
             Ask a Question
