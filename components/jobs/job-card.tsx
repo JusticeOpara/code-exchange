@@ -2,6 +2,7 @@ import { processJobTitle } from "@/lib/utils";
 import { Job } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
+import { RiTimeLine,RiMoneyDollarCircleLine, RiArrowUpLine } from "@remixicon/react";
 
 interface JobLocationProps {
   jobCountry?: string;
@@ -75,7 +76,7 @@ const JobCard = ({ job }: JobCardProps) => {
           </Link>
         ) : (
           <Image
-            src="/assets/images/site-logo.svg"
+            src="/site-logo.svg"
             alt="default site logo"
             width={64}
             height={64}
@@ -106,22 +107,24 @@ const JobCard = ({ job }: JobCardProps) => {
         <div className="flex-between mt-8 flex-wrap gap-6">
           <div className="flex flex-wrap items-center gap-6">
             <div className="flex items-center gap-2">
-              <Image
+              {/* <Image
                 src="/assets/icons/clock-2.svg"
                 alt="clock"
                 width={20}
                 height={20}
-              />
+              /> */}
+              <RiTimeLine/>
               <p className="body-medium text-light-500">{jobEmploymentType}</p>
             </div>
 
             <div className="flex items-center gap-2">
-              <Image
+              {/* <Image
                 src="/assets/icons/currency-dollar-circle.svg"
                 alt="dollar symbol"
                 width={20}
                 height={20}
-              />
+              /> */}
+              <RiMoneyDollarCircleLine/>
               <p className="body-medium text-light-500">Not disclosed</p>
             </div>
           </div>
@@ -132,12 +135,13 @@ const JobCard = ({ job }: JobCardProps) => {
             className="flex items-center gap-2"
           >
             <p className="body-semibold primary-text-gradient">View job</p>
-            <Image
+            {/* <Image
               src="/assets/icons/arrow-up-right.svg"
               alt="arrow up right"
               width={20}
               height={20}
-            />
+            /> */}
+            <RiArrowUpLine/>
           </Link>
         </div>
       </div>

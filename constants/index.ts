@@ -14,7 +14,8 @@ import {
     RiUser3Fill,
     RiUser3Line,
     RiMenuSearchLine,
-    RiMenuSearchFill
+    RiMenuSearchFill,
+
   } from "@remixicon/react";
   
   import { SidebarLink } from "@/types";
@@ -52,12 +53,12 @@ import {
       icon: RiBookmarkLine,
       iconFilled: RiBookmarkFill,
     },
-    // {
-    //   route: "/jobs",
-    //   label: "Find Jobs",
-    //   icon: RiMenuSearchLine,
-    //   iconFilled: RiMenuSearchFill,
-    // },
+    {
+      route: "/jobs",
+      label: "Find Jobs",
+      icon: RiMenuSearchLine,
+      iconFilled: RiMenuSearchFill,
+    },
     {
       route: "/profile",
       label: "Profile",
