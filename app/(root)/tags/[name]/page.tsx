@@ -67,3 +67,4 @@ const TagPage = async ({
     </div>
   );
 };
+export default TagPage;

@@ -1,4 +1,4 @@
-/* eslint-disable tailwindcss/no-custom-classname */
+// /* eslint-disable tailwindcss/no-custom-classname */
 
 
 import { Slot } from "@radix-ui/react-slot";

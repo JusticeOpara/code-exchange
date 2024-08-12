@@ -1,6 +1,7 @@
 import { Schema, models, model, Document } from "mongoose";
 
 export interface IUser extends Document {
+  _id: string; // just add this to check if it works
   clerkId: string;
   name: string;
   username: string;
@@ -14,6 +15,7 @@ export interface IUser extends Document {
   savedQuestions: Schema.Types.ObjectId[];
   joinedAt: Date;
 }
+
 const userSchema = new Schema({
   clerkId: { type: String, required: true, unique: true },
   name: { type: String, required: true },
