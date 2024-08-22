@@ -11,6 +11,7 @@ import { Tag } from "@/types";
 import { Button } from "@/components/ui/button";
 
 const Discover = ({ username }: { username: string }) => {
+  console.log(username,"--username")
   const pathname = usePathname();
   const router = useRouter();
 
@@ -91,7 +92,7 @@ const SidebarContent = ({
           variant="default"
           onClick={() => {
             if (!username)
-              return toast.error("Sign in required to access this pagehghghghg");
+              return toast.error("Sign in required to access this page");
           }}
         >
           Ask a Question
