@@ -129,7 +129,7 @@ const QuestionForm = ({ userId, question, edit }: Props) => {
           <InputField
             name="title"
             label="Question Title"
-            placeholder="e.g. How to use React Query?"
+            placeholder="e.g. How to use redux toolkit?"
             form={form}
           />
           <TinyEditor
