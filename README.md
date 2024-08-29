@@ -13,26 +13,26 @@ Code exchange is a Stack Overflow clone built with cutting-edge technologies to 
 
 ## 💡 Features
 
-- **Next.js 14 & Server Actions:**
-- **AI-Generated Answers:**
-- **Shadcn UI Component System:**
-- **Badge & Reputation System:**
-- **Auth Using Clerk:**
-- **Views:**
-- **Collections:**
-- Vote
-- **Community:**
-- **Find Jobs:**
-- **Questions & Answers:**
-- **Top Questions & Popular Tags:**
-- **Tags:**
-- **Ask A Question:**
-- **Dark & Light Mode:**
-- **Search:**
-- **Profile Page:**
-- **ORM Using Mongoose:**
-- **MongoDB:**
-- **Mobile Responsiveness:**
+- **Next.js 14 & Server Actions:** Leverage the power of the latest Next.js framework for optimal performance and scalability.
+- **AI-Generated Answers:** Receive intelligent, AI-generated responses to your questions, enhancing your problem-solving experience.
+- **Shadcn UI Component System:** Enjoy a beautiful and cohesive interface designed with Shadcn UI components for a smooth user experience.
+- **Badge & Reputation System:** Earn badges and build your reputation through active participation and contributions to the community.
+- **Auth Using Clerk:** Secure authentication and registration powered by Clerk for a hassle-free login experience.
+- **Views:** Track the popularity and engagement of questions through view counts.
+- **Collections:** Organize and manage your favorite questions and answers in personalized collections.
+- Vote: Vote on questions and answers to highlight the most helpful and relevant content.
+- **Community:** Join a vibrant community of developers and tech enthusiasts.
+- **Find Jobs:** Discover job opportunities tailored to your skills and interests.
+- **Questions & Answers:** Post questions and provide answers to foster knowledge sharing.
+- **Top Questions & Popular Tags:** Explore top-rated questions and trending tags for quick insights.
+- **Tags:** Utilize tags to categorize and filter questions effectively.
+- **Ask A Question:** Easily post your questions to seek help from the community.
+- **Dark & Light Mode:** Switch between dark and light themes to suit your preference.
+- **Search:** Find questions, answers, and tags quickly with a powerful search functionality.
+- **Profile Page:** Showcase your contributions and track your activity with a personalized profile page.
+- **ORM Using Mongoose:** Simplify data management with Mongoose ORM.
+- **MongoDB:** Rely on MongoDB for robust and scalable data storage.
+- **Mobile Responsiveness:** Access Code Stacker on the go with a fully responsive design for mobile devices.
 
 ## ✏️ Requirements
 
