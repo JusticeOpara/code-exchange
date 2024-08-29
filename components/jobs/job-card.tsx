@@ -52,7 +52,7 @@ const JobCard = ({ job }: JobCardProps) => {
   } = job;
 
   return (
-    <section className="background-light900_dark200 light-border shadow-light100_darknone flex flex-col items-start gap-6 rounded-lg border p-6 sm:flex-row sm:p-8">
+    <section className="flex flex-col items-start gap-6 rounded-lg border p-6 sm:flex-row sm:p-8 text-primary">
       <div className="flex w-full justify-end sm:hidden">
         <JobLocationCard
           jobCountry={jobCountry}
@@ -65,13 +65,13 @@ const JobCard = ({ job }: JobCardProps) => {
         {employerLogo ? (
           <Link
             href={employerWebsite ?? "/jobs"}
-            className="background-light800_dark400 relative h-16 w-16 rounded-xl"
+            className="relative h-16 w-16 rounded-xl"
           >
             <Image
               src={employerLogo}
               alt="company logo"
               fill
-              className="h-full w-full object-contain p-2"
+              className="h-full w-full object-contain p-2 text-primary"
             />
           </Link>
         ) : (
@@ -87,7 +87,7 @@ const JobCard = ({ job }: JobCardProps) => {
 
       <div className="w-full">
         <div className="flex-between flex-wrap gap-2">
-          <p className="base-semibold text-dark200_light900 line-clamp-1">
+          <p className="font-semibold text-primary line-clamp-1">
             {processJobTitle(jobTitle)}
           </p>
 
@@ -100,7 +100,7 @@ const JobCard = ({ job }: JobCardProps) => {
           </div>
         </div>
 
-        <p className="body-regular text-dark500_light700  mt-2 line-clamp-2">
+        <p className="text-primary  mt-2 line-clamp-2">
           {jobDescription?.slice(0, 200)}
         </p>
 
@@ -114,7 +114,7 @@ const JobCard = ({ job }: JobCardProps) => {
                 height={20}
               /> */}
               <RiTimeLine/>
-              <p className="body-medium text-light-500">{jobEmploymentType}</p>
+              <p className="text-primary">{jobEmploymentType}</p>
             </div>
 
             <div className="flex items-center gap-2">
@@ -125,7 +125,7 @@ const JobCard = ({ job }: JobCardProps) => {
                 height={20}
               /> */}
               <RiMoneyDollarCircleLine/>
-              <p className="body-medium text-light-500">Not disclosed</p>
+              <p className="text-primary">Not disclosed</p>
             </div>
           </div>
 
@@ -134,7 +134,7 @@ const JobCard = ({ job }: JobCardProps) => {
             target="_blank"
             className="flex items-center gap-2"
           >
-            <p className="body-semibold primary-text-gradient">View job</p>
+            <p className="text-primary">View job</p>
             {/* <Image
               src="/assets/icons/arrow-up-right.svg"
               alt="arrow up right"

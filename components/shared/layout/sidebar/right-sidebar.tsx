@@ -17,7 +17,7 @@ const RightSidebar = async () => {
             <Link
               href={`/questions/${question._id}`}
               key={question._id}
-              className="text-hover flex-between group cursor-pointer gap-7 primary-gradient"
+              className="text-hover flex-between group cursor-pointer gap-7"
             >
               <p className="w-full text-sm">{question.title}</p>
               <RiArrowRightUpLine className="duration-300 group-hover:rotate-45" />

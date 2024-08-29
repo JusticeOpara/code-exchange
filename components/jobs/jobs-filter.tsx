@@ -47,7 +47,7 @@ const FILTER_SEARCH_PARAMS_KEY = "filter";
         defaultValue={paramFilter || undefined}
       >
         <SelectTrigger
-          className={`${otherClasses} body-regular light-border background-light800_dark300 text-dark500_light700 flex items-center gap-3 border px-4 py-2.5`}
+          className={`${otherClasses} border-primary text-primary flex items-center gap-3 border px-4 py-2.5`}
         >
           {/* <Image
             src="/assets/icons/carbon-location.svg"
@@ -60,7 +60,7 @@ const FILTER_SEARCH_PARAMS_KEY = "filter";
             <SelectValue placeholder="Select Location" />
           </div>
         </SelectTrigger>
-        <SelectContent className="text-dark500_light700 small-regular border-none bg-light-900 dark:bg-dark-300">
+        <SelectContent className="text-primary small-regular border-none">
           <SelectGroup>
             {filters.length === 0 ? (
               <SelectItem value="No results found">No results found</SelectItem>
@@ -69,7 +69,7 @@ const FILTER_SEARCH_PARAMS_KEY = "filter";
                 <SelectItem
                   key={item}
                   value={item}
-                  className="line-clamp-1 cursor-pointer focus:bg-light-800 dark:focus:bg-dark-400"
+                  className="line-clamp-1 cursor-pointer shadow bg-primary"
                 >
                   {item}
                 </SelectItem>
