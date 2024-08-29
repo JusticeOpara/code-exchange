@@ -32,7 +32,7 @@ Code exchange is a Stack Overflow clone built with cutting-edge technologies to 
 - **Profile Page:** Showcase your contributions and track your activity with a personalized profile page.
 - **ORM Using Mongoose:** Simplify data management with Mongoose ORM.
 - **MongoDB:** Rely on MongoDB for robust and scalable data storage.
-- **Mobile Responsiveness:** Access Code Stacker on the go with a fully responsive design for mobile devices.
+- **Mobile Responsiveness:** Access Code Exchange on the go with a fully responsive design for mobile devices.
 
 ## ✏️ Requirements
 
